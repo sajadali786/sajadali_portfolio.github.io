@@ -1,31 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PhD Student Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      /* Simple smooth scroll */
-      html {
-        scroll-behavior: smooth;
-      }
-    </style>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.1.1/",
-    "react": "https://esm.sh/react@^19.1.1",
-    "react-dom/": "https://esm.sh/react-dom@^19.1.1/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Master's Student</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-  <body class="bg-gray-50 text-gray-800">
-    <div id="root"></div>
-  <script type="module" src="/index.tsx"></script>
+<body>
+
+    <header>
+        <nav>
+            <div class="container">
+                <h1>Your Name</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#research">Research</a></li>
+                    <li><a href="#publications">Publications</a></li>
+                    <li><a href="#cv">CV</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <img src="https://via.placeholder.com/150" alt="A professional headshot of Your Name" class="profile-picture">
+                <p>Write a brief and engaging biography here. Mention your current Master's program, your university, and your primary research interests. You can also include a sentence or two about your academic background and what you are passionate about within your field. This section should give visitors a quick and clear understanding of who you are as a researcher. [3]</p>
+            </div>
+        </section>
+
+        <section id="research" class="container">
+            <h2>Research</h2>
+            <div class="research-item">
+                <h3>Project Title 1</h3>
+                <p>Provide a detailed description of your current or most significant research project. Explain the research questions, methodologies used, and any preliminary findings. If applicable, you can also mention your supervisors or collaborators on this project.</p>
+            </div>
+            <div class="research-item">
+                <h3>Project Title 2</h3>
+                <p>Describe another research project here. This could be from a previous degree or a different area of interest. Highlighting a variety of projects can showcase the breadth of your skills and knowledge.</p>
+            </div>
+        </section>
+
+        <section id="publications" class="container">
+            <h2>Publications</h2>
+            <div class="publication-item">
+                <p><strong>Your Name</strong>, Co-author Name (Year). "Title of the Publication." <em>Journal or Conference Name</em>, Volume(Issue), pages. <a href="#">[Link to Publication]</a></p>
+            </div>
+            <div class="publication-item">
+                <p>Your Name (Year). "Title of another Publication." <em>Journal or Conference Name</em>, Volume(Issue), pages. <a href="#">[Link to Publication]</a></p>
+            </div>
+        </section>
+
+        <section id="cv" class="container">
+            <h2>Curriculum Vitae</h2>
+            <p>You can download a current version of my CV by clicking the button below.</p>
+            <a href="path/to/your/cv.pdf" class="button" download>Download CV</a>
+        </section>
+
+        <section id="contact" class="container">
+            <h2>Contact</h2>
+            <p>I am always open to discussing research, collaborations, or other opportunities. Please feel free to reach out to me via email.</p>
+            <p><strong>Email:</strong> <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
+            <p>You can also find me on the following platforms:</p>
+            <ul class="social-links">
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Google Scholar</a></li>
+                <li><a href="#">Twitter</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
