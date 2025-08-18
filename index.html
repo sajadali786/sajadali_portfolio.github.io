@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Master's Student</title>
-    
-    <!-- Google Fonts -->
+    <title>Your Name | Master's Student</title>
+
+    <!-- Google Fonts (Poppins) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <header>
         <nav class="container">
             <a href="#" class="logo">Your Name</a>
@@ -24,7 +23,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#research">Research</a></li>
                 <li><a href="#publications">Publications</a></li>
-                <li><a href="#cv">CV</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -32,74 +30,118 @@
 
     <main>
         <!-- Hero Section -->
-        <section id="hero" class="container">
-            <h1>Welcome! I'm [Your Name]</h1>
-            <p class="subtitle">A Master's student at [Your University] specializing in [Your Field of Study].</p>
+        <section id="hero">
+            <div class="container">
+                <h1>Hello, I'm [Your Name]</h1>
+                <p class="subtitle">I am a <span id="typing-effect"></span></p>
+                <div class="hero-buttons">
+                    <a href="path/to/your/cv.pdf" class="button button-primary" download>Download CV</a>
+                    <a href="#contact" class="button">Contact Me</a>
+                </div>
+            </div>
         </section>
 
         <!-- About Me Section -->
         <section id="about" class="container">
-            <h2>About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-content">
-                <img src="https://via.placeholder.com/150" alt="A professional headshot of Your Name" class="profile-picture">
-                <div>
-                    <p>Write a brief and engaging biography here. Mention your current Master's program, your university, and your primary research interests. You can also include a sentence or two about your academic background and what you are passionate about within your field. This section should give visitors a quick and clear understanding of who you are as a researcher.</p>
+                <img src="https://via.placeholder.com/250" alt="A professional headshot of Your Name" class="profile-picture">
+                <div class="about-text">
+                    <h3>A passionate researcher and student.</h3>
+                    <p>Write your biography here. Talk about your Master's program, your university, and research interests. Explain what drives you and what you hope to achieve. Make it personal but professional.</p>
+                    <p>You can add another paragraph to elaborate on your background, specific skills, or long-term career goals. This helps visitors understand your journey.</p>
                 </div>
             </div>
         </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="container">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fas fa-flask"></i>
+                    <h3>Lab Technique</h3>
+                    <p>e.g., PCR, Western Blot, Cell Culture</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Data Analysis</h3>
+                    <p>e.g., R, Python, SPSS, MATLAB</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-book-open"></i>
+                    <h3>Literature Review</h3>
+                    <p>Systematic reviews, meta-analyses</p>
+                </div>
+                 <div class="skill-card">
+                    <i class="fas fa-file-alt"></i>
+                    <h3>Academic Writing</h3>
+                    <p>Grant proposals, manuscript preparation</p>
+                </div>
+            </div>
+        </section>
+
 
         <!-- Research Section -->
         <section id="research" class="container">
-            <h2>Research</h2>
-            <div class="card-container">
-                <div class="card">
-                    <h3>Project Title 1</h3>
-                    <p>Provide a detailed description of your current or most significant research project. Explain the research questions, methodologies used, and any preliminary findings. Mention your supervisors or collaborators.</p>
+            <h2 class="section-title">Research Projects</h2>
+            <div class="project-grid">
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project Title 1</h3>
+                        <p>A concise but informative description of the research project. Outline the key objectives, methods, and your specific role or contribution.</p>
+                        <div class="project-tags">
+                            <span>Tag One</span>
+                            <span>Tag Two</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Project Title 2</h3>
-                    <p>Describe another research project here. This could be from a previous degree or a different area of interest. Highlighting a variety of projects can showcase the breadth of your skills and knowledge.</p>
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Project Title 2</h3>
+                        <p>Another description for a different project. Focus on the impact and the skills you developed. Highlighting variety is a good strategy.</p>
+                        <div class="project-tags">
+                            <span>Tag Three</span>
+                            <span>Tag Four</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
-
+        
         <!-- Publications Section -->
         <section id="publications" class="container">
-            <h2>Publications</h2>
-            <div class="card-container">
-                 <div class="card publication">
-                    <p><strong>Your Name</strong>, Co-author Name (Year). "Title of the Publication." <em>Journal or Conference Name</em>, Volume(Issue), pages. <a href="#" class="publication-link">Read More</a></p>
-                </div>
-                 <div class="card publication">
-                    <p>Your Name (Year). "Title of another Publication." <em>Journal or Conference Name</em>, Volume(Issue), pages. <a href="#" class="publication-link">Read More</a></p>
-                </div>
-            </div>
-        </section>
-
-        <!-- CV Section -->
-        <section id="cv" class="container">
-            <h2>Curriculum Vitae</h2>
-            <p>For a detailed overview of my academic and professional experience, please download my CV.</p>
-            <a href="path/to/your/cv.pdf" class="button" download><i class="fas fa-download"></i> Download CV</a>
+             <h2 class="section-title">Publications</h2>
+             <div class="publication-list">
+                 <div class="publication-item">
+                     <p><strong>Your Name</strong>, Co-author (Year). "Title of Publication." <em>Journal Name</em>. <a href="#">[DOI Link]</a></p>
+                 </div>
+                 <div class="publication-item">
+                     <p><strong>Your Name</strong> (Year). "Title of Conference Paper." <em>Conference Proceedings</em>. <a href="#">[Link]</a></p>
+                 </div>
+             </div>
         </section>
 
         <!-- Contact Section -->
         <section id="contact" class="container">
-            <h2>Get in Touch</h2>
-            <p>I am always open to discussing research, collaborations, or other opportunities. Please feel free to reach out.</p>
-            <div class="contact-links">
-                <p><i class="fas fa-envelope"></i> <a href="mailto:your.email@university.edu">your.email@university.edu</a></p>
-                <p><i class="fab fa-linkedin"></i> <a href="#">LinkedIn Profile</a></p>
-                <p><i class="fab fa-google-scholar"></i> <a href="#">Google Scholar</a></p>
-            </div>
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="contact-subtitle">I'm currently open to collaborations and new opportunities. My inbox is always open!</p>
+            <a href="mailto:your.email@university.edu" class="button button-primary">Say Hello</a>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Your Name. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-google-scholar"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p>&copy; 2025 Your Name. Built with passion.</p>
         </div>
     </footer>
 
+    <!-- The JavaScript file for the typing effect -->
+    <script src="script.js"></script>
 </body>
 </html>
