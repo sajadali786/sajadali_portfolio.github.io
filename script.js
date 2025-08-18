@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const typingElement = document.getElementById('typing-effect');
-    const words = ["Master's Student.", "Researcher.", "Data Analyst.", "Future PhD."]; // Customize these words
+    // Words customized for Sajad Ali
+    const words = ["Electrical Engineer.", "Power Systems Researcher.", "Networks Engineer."]; 
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
