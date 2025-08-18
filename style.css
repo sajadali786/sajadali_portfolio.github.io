@@ -1,155 +1,240 @@
-/* General Body Styles */
+/* --- Custom Properties (Variables) for Easy Theming --- */
+:root {
+    --primary-color: #005A9C; /* A professional blue */
+    --secondary-color: #003B66; /* A darker blue for hover/accents */
+    --background-color: #f8f9fa;
+    --text-color: #333;
+    --heading-font: 'Montserrat', sans-serif;
+    --body-font: 'Lato', sans-serif;
+    --card-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* --- General and Reset Styles --- */
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6;
+    font-family: var(--body-font);
+    line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .container {
-    width: 80%;
+    width: 85%;
+    max-width: 1100px;
     margin: auto;
     overflow: hidden;
-    padding: 0 20px;
+    padding: 20px 0;
 }
 
-/* Header and Navigation */
+h1, h2, h3 {
+    font-family: var(--heading-font);
+    color: var(--primary-color);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2rem;
+    position: relative;
+}
+
+/* Underline effect for section titles */
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 8px auto 0;
+}
+
+/* --- Header & Navigation --- */
 header {
-    background: #333;
+    background: #fff;
     color: #fff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #0779e4 3px solid;
+    width: 100%;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-header h1 {
-    float: left;
-    margin-top: 0;
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header nav {
-    float: right;
-    margin-top: 10px;
+.logo {
+    color: var(--primary-color);
+    font-family: var(--heading-font);
+    font-size: 24px;
+    text-decoration: none;
 }
 
 header ul {
     padding: 0;
     margin: 0;
+    list-style: none;
 }
 
 header li {
     display: inline;
-    padding: 0 20px 0 20px;
+    padding: 0 15px;
 }
 
 header a {
-    color: #fff;
+    color: var(--text-color);
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 header a:hover {
-    color: #ccc;
+    color: var(--primary-color);
 }
 
-/* Main Content Sections */
+/* --- Hero Section --- */
+#hero {
+    text-align: center;
+    padding: 60px 0;
+}
+
+#hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* --- Main Content Sections --- */
 main section {
-    padding: 20px 0;
-    border-bottom: 1px solid #ddd;
+    padding: 40px 0;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-main h2 {
-    color: #333;
-}
-
-/* About Me Section */
+/* --- About Me Section --- */
 .about-content {
     display: flex;
     align-items: center;
+    gap: 40px;
 }
 
 .profile-picture {
     border-radius: 50%;
-    margin-right: 20px;
     width: 150px;
     height: 150px;
+    border: 3px solid var(--primary-color);
 }
 
-/* Research and Publications */
-.research-item, .publication-item {
-    margin-bottom: 20px;
+/* --- Card Layout for Research & Publications --- */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
     background: #fff;
-    padding: 20px;
-    border-radius: 5px;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* CV Section */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.publication a {
+    color: var(--primary-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.publication a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- CV & Contact Section --- */
+#cv, #contact {
+    text-align: center;
+}
+
 .button {
     display: inline-block;
-    background: #333;
+    background: var(--primary-color);
     color: #fff;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background: #555;
+    background: var(--secondary-color);
 }
 
-/* Contact and Social Links */
-.social-links {
-    list-style: none;
-    padding: 0;
+.contact-links p {
+    font-size: 1.1rem;
 }
 
-.social-links li {
-    display: inline;
-    margin-right: 15px;
-}
-
-.social-links a {
+.contact-links a {
+    color: var(--text-color);
     text-decoration: none;
-    color: #333;
 }
 
-/* Footer */
+.contact-links a:hover {
+    text-decoration: underline;
+    color: var(--primary-color);
+}
+
+.contact-links i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* --- Footer --- */
 footer {
-    background: #333;
+    background: var(--secondary-color);
     color: #fff;
     text-align: center;
-    padding: 30px 0;
+    padding: 20px 0;
     margin-top: 20px;
 }
 
-/* Responsive Design */
+/* --- Responsive Design --- */
 @media(max-width: 768px) {
-    header h1,
-    header nav {
-        float: none;
-        text-align: center;
-        width: 100%;
+    header .container {
+        flex-direction: column;
     }
-
+    
     header nav ul {
-        margin-top: 20px;
+        margin-top: 15px;
     }
 
-    header nav li {
-        display: block;
-        padding: 10px 0;
+    #hero h1 {
+        font-size: 2.5rem;
     }
 
     .about-content {
         flex-direction: column;
         text-align: center;
-    }
-
-    .profile-picture {
-        margin: 0 0 20px 0;
     }
 }
